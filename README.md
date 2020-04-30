@@ -2,7 +2,7 @@
 title: "ReadMe.Md"
 author: "YOU!"
 date: "30 04 2020"
-output: html_document
+output: github_document
 ---
 
 ## Course Project Overview
