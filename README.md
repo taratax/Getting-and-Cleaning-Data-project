@@ -1,6 +1,6 @@
 ---
 title: "ReadMe.Md"
-author: "YOU!"
+author: "Gabriel Kieruzel"
 date: "30 04 2020"
 output: github_document
 ---
