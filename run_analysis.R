@@ -57,12 +57,12 @@ names(FeaturesData) <- FeatureNames$V2
 DataSet <- cbind(SubjectData,Activity)
 DataSet <- cbind(DataSet,FeaturesData)
 
-###New datasets by using measurements of mean stddev
+###New datasets by using measurements of mean and stddev -using regular expressions - word 'mean' followed by pair of braces or 'word' std followed by pair of braces
 subFeaturesNames <- FeatureNames$V2[grep("mean\\(\\)|std\\(\\)", FeatureNames$V2)]
 DataNames <- c("Subject","Activity", as.character(subFeaturesNames))
 DataSet <- subset(DataSet,select=DataNames)
 
-#####Rename the columns to more descriptive names
+#####Rename the columns to more descriptive names - using regexps
 names(DataSet)<-gsub("^t","time",names(DataSet))
 names(DataSet)<-gsub("^f","frequency",names(DataSet))
 names(DataSet)<-gsub("Acc","Accelerometer",names(DataSet))
